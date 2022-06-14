@@ -1,0 +1,36 @@
+{
+    "students" : [
+        {
+            "id": 1,
+            "name": "Tri",
+            "alterEgo": "Bruce Wayne" 
+        },
+        {
+            "id": 2,
+            "name": "Thanh",
+            "alterEgo": "Clark Kent" 
+        },
+        {
+            "id": 3,
+            "name": "Thu",
+            "alterEgo": "Princess Diana" 
+        }
+    ],
+    "courses": [
+        {
+            "id": 1,
+            "name": "Toan",
+            "coin": 500
+        },
+        {
+            "id": 2,
+            "name": "Ly",
+            "coin": 400
+        },
+        {
+            "id": 3,
+            "name": "Hoa",
+            "coin": 200
+        }
+    ]
+}
