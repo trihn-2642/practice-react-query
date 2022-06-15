@@ -14,7 +14,17 @@ import "./App.css";
 const HomePage = React.lazy(() => import("./components/HomePage"));
 const StudentsPage = React.lazy(() => import("./components/StudentsPage"));
 const RQStudentsPage = React.lazy(() => import("./components/RQStudentsPage"));
-const CoursesPage =  React.lazy(() => import("./components/CoursesPage"));
+const RQStudentsDetailPage = React.lazy(() =>
+  import("./components/RQStudentDetailPage")
+);
+const CoursesPage = React.lazy(() => import("./components/CoursesPage"));
+const ParallelQueriesPage = React.lazy(() =>
+  import("./components/ParallelQueriesPage")
+);
+const DynamicParallelQueriesPage = React.lazy(() =>
+  import("./components/DynamicParallelQueriesPage")
+);
+const DependentQueriesPage = React.lazy(() => import("./components/DependentQueriesPage"));
 const NotFoundPage = React.lazy(() => import("./components/404Page"));
 
 const queryClient = new QueryClient();
@@ -28,24 +38,43 @@ function App() {
             <nav>
               <ul>
                 <li>
-                  <Link to="/home-page"> Home Page </Link>
+                  <Link to="/home">Home</Link>
                 </li>
                 <li>
-                  <Link to="/students-page"> Students Page </Link>
+                  <Link to="/students">Students</Link>
                 </li>
                 <li>
-                  <Link to="/rq-students-page"> RQ Students Page </Link>
+                  <Link to="/rq-students">RQ Students</Link>
                 </li>
                 <li>
-                  <Link to="/courses-page"> Courses Page </Link>
+                  <Link to="/courses">Courses</Link>
+                </li>
+                <li>
+                  <Link to="/parallel">Parallel Queries</Link>
+                </li>
+                <li>
+                  <Link to="/dynamic-parallel">Dynamic Parallel Queries</Link>
+                </li>
+                <li>
+                  <Link to="/dependent">Dependent Queries</Link>
                 </li>
               </ul>
             </nav>
             <Routes>
-              <Route exact path="/home-page" element={<HomePage />} />
-              <Route path="/students-page" element={<StudentsPage />} />
-              <Route path="/rq-students-page" element={<RQStudentsPage />} /> 
-              <Route path="/courses-page" element={<CoursesPage />} />
+              <Route exact path="/home" element={<HomePage />} />
+              <Route path="/students" element={<StudentsPage />} />
+              <Route path="/rq-students" element={<RQStudentsPage />} />
+              <Route
+                path="/rq-students/:studentId"
+                element={<RQStudentsDetailPage />}
+              />
+              <Route path="/courses" element={<CoursesPage />} />
+              <Route path="/parallel" element={<ParallelQueriesPage />} />
+              <Route
+                path="/dynamic-parallel"
+                element={<DynamicParallelQueriesPage />}
+              />
+                <Route path="/dependent" element={<DependentQueriesPage />} />
               <Route path="/404" element={<NotFoundPage />} />
               <Route path="/" element={<Navigate to="/home-page" />} />
               <Route path="*" element={<Navigate to="/404" />} />

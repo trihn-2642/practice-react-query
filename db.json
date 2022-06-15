@@ -1,36 +1,67 @@
 {
-    "students" : [
-        {
-            "id": 1,
-            "name": "Tri",
-            "alterEgo": "Bruce Wayne" 
-        },
-        {
-            "id": 2,
-            "name": "Thanh",
-            "alterEgo": "Clark Kent" 
-        },
-        {
-            "id": 3,
-            "name": "Thu",
-            "alterEgo": "Princess Diana" 
-        }
-    ],
-    "courses": [
-        {
-            "id": 1,
-            "name": "Toan",
-            "coin": 500
-        },
-        {
-            "id": 2,
-            "name": "Ly",
-            "coin": 400
-        },
-        {
-            "id": 3,
-            "name": "Hoa",
-            "coin": 200
-        }
-    ]
+  "students": [
+    {
+      "id": 1,
+      "name": "Tri",
+      "alterEgo": "Bruce Wayne"
+    },
+    {
+      "id": 2,
+      "name": "Thanh",
+      "alterEgo": "Clark Kent"
+    },
+    {
+      "id": 3,
+      "name": "Thu",
+      "alterEgo": "Princess Diana"
+    }
+  ],
+  "courses": [
+    {
+      "id": 1,
+      "name": "maths",
+      "coin": 500
+    },
+    {
+      "id": 2,
+      "name": "Physics",
+      "coin": 400
+    },
+    {
+      "id": 3,
+      "name": "Chemistry",
+      "coin": 200
+    }
+  ],
+  "friends": [
+    {
+      "id": 1,
+      "name": "Chandler Bing"
+    },
+    {
+      "id": 2,
+      "name": "Joey Tribbiani"
+    },
+    {
+      "id": 3,
+      "name": "Rachel Green"
+    }
+  ],
+  "users": [
+    {
+      "id": "tri123456789@gmail.com",
+      "student_id": 1,
+      "course_ids": [1, 2]
+    },
+    {
+      "id": "thanh123456789@gmail.com",
+      "student_id": 2,
+      "course_ids": [2, 3]
+    },
+    {
+      "id": "thu123456789@gmail.com",
+      "student_id": 3,
+      "course_ids": [1, 3]
+    }
+  ]
 }
