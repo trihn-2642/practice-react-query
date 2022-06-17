@@ -24,7 +24,15 @@ const ParallelQueriesPage = React.lazy(() =>
 const DynamicParallelQueriesPage = React.lazy(() =>
   import("./components/DynamicParallelQueriesPage")
 );
-const DependentQueriesPage = React.lazy(() => import("./components/DependentQueriesPage"));
+const DependentQueriesPage = React.lazy(() =>
+  import("./components/DependentQueriesPage")
+);
+const PaginatedQueriesPage = React.lazy(() =>
+  import("./components/PaginatedQueriesPage")
+);
+const InfiniteQueriesPage = React.lazy(() =>
+  import("./components/InfiniteQueriesPage")
+);
 const NotFoundPage = React.lazy(() => import("./components/404Page"));
 
 const queryClient = new QueryClient();
@@ -58,6 +66,12 @@ function App() {
                 <li>
                   <Link to="/dependent">Dependent Queries</Link>
                 </li>
+                <li>
+                  <Link to="/paginated">Paginated / Lagged Queries</Link>
+                </li>
+                <li>
+                  <Link to="/infinite">Infinite Queries</Link>
+                </li>
               </ul>
             </nav>
             <Routes>
@@ -74,7 +88,9 @@ function App() {
                 path="/dynamic-parallel"
                 element={<DynamicParallelQueriesPage />}
               />
-                <Route path="/dependent" element={<DependentQueriesPage />} />
+              <Route path="/dependent" element={<DependentQueriesPage />} />
+              <Route path="/paginated" element={<PaginatedQueriesPage />} />
+              <Route path="/infinite" element={<InfiniteQueriesPage />} />
               <Route path="/404" element={<NotFoundPage />} />
               <Route path="/" element={<Navigate to="/home-page" />} />
               <Route path="*" element={<Navigate to="/404" />} />
