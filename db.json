@@ -63,5 +63,47 @@
       "student_id": 3,
       "course_ids": [1, 3]
     }
+  ],
+  "colors": [
+    {
+      "id": 1,
+      "label": "red"
+    },
+    {
+      "id": 2,
+      "label": "blue"
+    },
+    {
+      "id": 3,
+      "label": "green"
+    },
+    {
+      "id": 4,
+      "label": "deeppink"
+    },
+    {
+      "id": 5,
+      "label": "yellow"
+    },
+    {
+      "id": 6,
+      "label": "black"
+    },
+    {
+      "id": 7,
+      "label": "orange"
+    },
+    {
+      "id": 8,
+      "label": "cyan"
+    },
+    {
+      "id": 9,
+      "label": "purple"
+    },
+    {
+      "id": 10,
+      "label": "while"
+    }
   ]
 }
