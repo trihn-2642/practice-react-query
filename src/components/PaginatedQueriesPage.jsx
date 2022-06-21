@@ -6,16 +6,18 @@ export default function PaginatedQueriesPage() {
   const [limit, setLimit] = useState(4);
   const [page, setPage] = useState(1);
 
-  const totalPage = Math.ceil(10/limit);
+  const totalPage = Math.ceil(10 / limit);
 
-  const { data, isLoading, isFetching, isError, error } =
-    useColorsData(limit, page);
+  const { data, isLoading, isFetching, isError, error } = useColorsData(
+    limit,
+    page
+  );
 
   const onSelectLimit = (event) => {
     const { value } = event.target;
     if (value) {
       setLimit(parseInt(value));
-      setPage(1)
+      setPage(1);
     }
   };
 
@@ -42,15 +44,16 @@ export default function PaginatedQueriesPage() {
         ))}
       </ul>
       <div>
-        <span>Current Page: {page} / {totalPage}</span>
-        <button
-          onClick={() => setPage((old) => old - 1)}
-          disabled={page === 1}
-        >
+        <span>
+          Current Page: {page} / {totalPage}
+        </span>
+        <button onClick={() => setPage((old) => old - 1)} disabled={page === 1}>
           Previous Page
         </button>{" "}
         <button
-          onClick={() => { setPage((old) => old + 1)}}
+          onClick={() => {
+            setPage((old) => old + 1);
+          }}
           disabled={page === totalPage}
         >
           Next Page

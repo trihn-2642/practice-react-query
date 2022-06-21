@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import axios from "axios";
 import { toast } from "react-toastify";
+import { request } from "./../utils/axios-utils";
 
 export default function StudentsPage() {
   const [isLoading, setIsLoading] = useState(true);
@@ -8,8 +8,7 @@ export default function StudentsPage() {
   const [error, setError] = useState("");
 
   useEffect(() => {
-    axios
-      .get("http://localhost:4000/students")
+    request({ url: "/students" })
       .then((res) => {
         setData(res.data);
         setIsLoading(false);
