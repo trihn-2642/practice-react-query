@@ -1,10 +1,9 @@
-import axios from "axios";
-import { URL } from "./../constant/index";
+import { request } from "./../utils/axios-utils";
 
 export const fetchCourses = () => {
-  return axios.get(`${URL}/courses`);
+  return request({ url: "/courses" });
 };
 
 export const fetchCourse = (courseId) => {
-  return axios.get(`${URL}/courses/${courseId}`);
+  return request({ url: `/courses/${courseId}` });
 };

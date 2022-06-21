@@ -5,7 +5,7 @@ function NotFoundPage() {
     <div
       style={{
         width: "100vw",
-        height: 'calc(100vh - 70px)',
+        height: "calc(100vh - 70px)",
         fontSize: "100px",
         display: "flex",
         alignItems: "center",

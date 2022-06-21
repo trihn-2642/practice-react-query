@@ -11,12 +11,18 @@ export const useStudentDetailData = (studentId) => {
 export const useStudentDataByInitialQuery = (studentId) => {
   const queryClient = useQueryClient();
 
-  return useQuery(["studentByInitialQuery", studentId], () => fetchStudent(studentId), {
-    initialData: () =>
-      queryClient
-        .getQueryData("students")
-        ?.data?.find((student) => student.studentId === parseInt(studentId)) || undefined,
-    initialDataUpdatedAt: () =>
-      queryClient.getQueryState("students")?.dataUpdatedAt,
-  });
+  return useQuery(
+    ["studentByInitialQuery", studentId],
+    () => fetchStudent(studentId),
+    {
+      initialData: () =>
+        queryClient
+          .getQueryData("students")
+          ?.data?.find(
+            (student) => student.studentId === parseInt(studentId)
+          ) || undefined,
+      initialDataUpdatedAt: () =>
+        queryClient.getQueryState("students")?.dataUpdatedAt,
+    }
+  );
 };

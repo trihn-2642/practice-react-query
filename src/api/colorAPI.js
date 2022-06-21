@@ -1,6 +1,5 @@
-import axios from "axios";
-import { URL } from "./../constant/index";
+import { request } from "./../utils/axios-utils";
 
-export const fetchColors = (limit, page) => {
-  return axios.get(`${URL}/colors?_limit=${limit}&_page=${page}`);
+export const fetchColors = (_limit, _page) => {
+  return request({ url: "/colors", params: { _limit, _page } });
 };

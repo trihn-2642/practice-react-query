@@ -1,6 +1,5 @@
-import axios from "axios";
-import { URL } from "./../constant/index";
+import { request } from "./../utils/axios-utils";
 
 export const fetchFriends = () => {
-    return axios.get(`${URL}/friends`);
-}
+  return request({ url: "/friends" });
+};
